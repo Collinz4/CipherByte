@@ -90,12 +90,12 @@ class KeyFactory {
 	private static byte[] sha512Hash(byte[] input) {
 		
 		try {
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
-            messageDigest.update(input);
-            return messageDigest.digest();
-        } catch(NoSuchAlgorithmException e) {
-            System.out.println("Error Hashing: " + e.getMessage());
-        }
-        return null;
+			MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
+			messageDigest.update(input);
+			return messageDigest.digest();
+		} catch(NoSuchAlgorithmException e) {
+			System.out.println("Error Hashing: " + e.getMessage());
+			return null;
+		}
 	}
 }
